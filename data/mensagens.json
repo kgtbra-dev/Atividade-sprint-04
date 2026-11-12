@@ -1,1 +1,7 @@
-[ ]
+[
+  {
+    "id": 1,
+    "usuario": "Exemplo",
+    "texto": "Gravado em arquivo!"
+  }
+]

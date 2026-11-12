@@ -2,16 +2,25 @@
   "name": "servidor",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
-  "author": "",
+  "homepage": "https://github.com/kgtbra-dev/sprint-04#readme",
+  "bugs": {
+    "url": "https://github.com/kgtbra-dev/sprint-04/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kgtbra-dev/sprint-04.git"
+  },
   "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
   "dependencies": {
     "express": "^5.3.0"
-  }
+  },
+  "devDependencies": {}
 }

@@ -2,7 +2,7 @@ import express from 'express';
 import { lerMensagens, salvarMensagens } from "./story.js";
 
 const app = express();
-const PORT = 3000;
+const PORT = 4000;
 
 app.get("/", (req, res) => res.send("Servidor rodando!"));
 app.get("/status", (req, res) => res.json({ status: "Online", sprint: 4 }));
