@@ -51,7 +51,7 @@ app.get("/exemplo-salvar", async (req, res) => {
 let filaGravacoes = Promise.resolve();
 app.get("/gravar-mensagem-correta", (req, res) => {
   const tarefa = filaGravacoes.then(async () => {
-    const lista = await lerMensagens();
+    const lista = await LerMensagens();
     const id = lista.reduce((maior, mensagem) => Math.max(maior, Number(mensagem.id) || 0), 0) + 1;
     const mensagem = { id, usuario: "Exemplo", texto: "Gravado em arquivo!" };
     await salvarMensagens([...lista, mensagem]);
