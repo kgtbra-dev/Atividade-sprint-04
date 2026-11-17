@@ -26,8 +26,9 @@ async function lerDadosSeguros(nomeArquivo) {
     } catch (erro) {
         if (erro.code === "ENOENT") {
             return [];
+        } else {
+            throw erro; 
         }
-        throw erro; 
     }
 };
 
