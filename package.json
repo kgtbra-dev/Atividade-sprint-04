@@ -1,26 +1,25 @@
 {
-  "name": "servidor",
+  "name": "sprint-04",
   "version": "1.0.0",
   "description": "",
-  "keywords": [],
-  "homepage": "https://github.com/kgtbra-dev/sprint-04#readme",
-  "bugs": {
-    "url": "https://github.com/kgtbra-dev/sprint-04/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kgtbra-dev/sprint-04.git"
-  },
-  "license": "ISC",
-  "author": "",
-  "type": "module",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kgtbra-dev/sprint-05.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/kgtbra-dev/sprint-05/issues"
+  },
+  "homepage": "https://github.com/kgtbra-dev/sprint-05#readme",
   "dependencies": {
     "express": "^5.3.0"
-  },
-  "devDependencies": {}
+  }
 }
