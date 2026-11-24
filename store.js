@@ -1,4 +1,4 @@
-// Exercício 3.1 parte 1
+// Exercício 3.1 
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 
 const ARQUIVO = new URL("./data/mensagens.json", import.meta.url);
@@ -21,3 +21,5 @@ export async function salvarMensagens(mensagens) {
     await mkdir(PASTA, { recursive: true });
     await writeFile(ARQUIVO, JSON.stringify(mensagens, null, 2), "utf8");
 }
+
+// Exercício 3.2
