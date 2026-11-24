@@ -21,7 +21,7 @@ await salvarHistorico()
 
 async function lerDadosSeguros(nomeArquivo) {
     try {
-        await readFile(nomeArquivo, "utf8");
+        const conteudo = await readFile(nomeArquivo, "utf8");
         return JSON.parse(conteudo);
     } catch (erro) {
         if (erro.code === "ENOENT") {
