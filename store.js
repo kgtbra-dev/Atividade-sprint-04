@@ -5,3 +5,5 @@ const ARQUIVO = new URL("./data/mensagens.json", import.meta.url);
 export async function lerMensagens() { 
     
  }
+
+//teste 
