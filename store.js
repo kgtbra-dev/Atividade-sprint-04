@@ -21,15 +21,3 @@ export async function salvarMensagens(mensagens) {
     await mkdir(PASTA, { recursive: true });
     await writeFile(ARQUIVO, JSON.stringify(mensagens, null, 2), "utf8");
 }
-
-// Exercício 3.1 parte 2
-export async function salvarMensagens(mensagens) {
-    await mkdir(new URL("./data/", import.meta.url), {
-        recursive: true
-    });
-    await writeFile (
-        ARQUIVO,
-        JSON.stringify(mensagens, null, 2),
-        "utf8"
-    );
-}
