@@ -4,7 +4,6 @@ import express from "express";
 //[ Sprint 04 -- Herdado] recebimento de dados por POST
 //recebe JSON do navegador ou de um cliente HTTP
 import { lerMensagens, salvarMensagens } from "./store.js";
-
 const app = express();
 const PORT = 3000;
 
@@ -46,15 +45,6 @@ app.get("/", (req, res) => res.send("Servidor rodando! 🚀"));
 app.get("/status", (req, res) => res.json({ status: "online", sprint: 5 }));
 app.get("/sobre", (req, res) => res.send("Mensageiro Local com Node.js, Express e ES Modules."));
 
-// — [SPRINT 04 - ROTAS HERDADAS] —
-app.get("/mensagens", async (req, res) => {
-    try { res.json(await lerMensagens()); }
-    catch (erro) {
-        console.error(erro);
-        res.status(500).json({ erro: "Não foi possível ler as mensagens." });
-    }
-});
-
 app.get("/mensagens/:id", async (req, res) => {
     try {
         const lista = await lerMensagens();
@@ -74,4 +64,26 @@ app.get("/total-mensagens", async (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Servidor em http://localhost:${PORT}`);
+});
+
+// Exercício 3.2
+
+// — [SPRINT 04 - ROTAS HERDADAS] — / Exercício 3.2
+app.get("/mensagens", async (req, res) => {
+    try { res.json(await lerMensagens()); }
+    catch (erro) {
+        console.error(erro);
+        res.status(500).json({ erro: "Erro na leitura"});
+    }
+});
+
+app.get("/exemplo-salvar", async (req, res) => {
+  try {
+    const lista = await lerMensagens();
+    lista.push({ id: Date.now(), usuario: "Aluno", texto: "Mensagem gravada no disco!" });
+    await salvarMensagens(lista);
+    res.json({ gravado: true, total: lista.length });
+  } catch (erro) {
+    res.status(500).json({ erro: "Falha ao gravar" });
+  }
 });

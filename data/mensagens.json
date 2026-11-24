@@ -3,5 +3,10 @@
     "id": 1,
     "usuario": "Exemplo",
     "texto": "Gravado em arquivo!"
+  },
+  {
+    "id": 1795526914276,
+    "usuario": "Aluno",
+    "texto": "Mensagem gravada no disco!"
   }
 ]
